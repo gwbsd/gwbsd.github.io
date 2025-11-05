@@ -1,175 +1,103 @@
 ---
-title: Markdown Example
-published: 2023-10-01
-description: A simple example of a Markdown blog post.
-tags: [Markdown, Blogging, Demo]
-category: Examples
+title: Markdown教程
+published: 2025-11-05
+description: 简单总结一些语法，方便使用查看
+tags: [教程]
+category: 教程
 draft: false
+lang: 'zh_CN'
 ---
 
-# An h1 header
+# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
 
-Paragraphs are separated by a blank line.
+链接："[]中文本后()加地址",该链接支持文内地址
+*[笔记学习链接1](https://blog.csdn.net/TeFuirnever/article/details/104255022?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522166832471516800192261198%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=166832471516800192261198&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-104255022-null-null.142^v63^control,201^v3^control,213^v2^t3_esquery_v1&utm_term=markdown&spm=1018.2226.3001.4187)*
+*[笔记学习链接2](https://www.bilibili.com/video/BV1hG411p7fX/?spm_id_from=333.337.search-card.all.click&vd_source=c2354efc6490d9100848bead37513bc0)<br />*
+![插入图片](/assets/Practical%20Work/建模流程.png)  
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists
-look like:
 
-- this one
-- that one
-- the other one
 
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+*斜体文本<br />* Ctrl + I
+_斜体文本<br />_
+**粗体文本<br />** Ctrl + B
+__粗体文本<br />__
+***粗体斜文本<br />***
+___粗体斜文本<br />___
+==高亮== 
 
-> Block quotes are
-> written like so.
->
-> They can span multiple paragraphs,
-> if you like.
+<p style="text-align: center;">
+  这是居中的文本
+</p>
 
-Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
-in chapters 12--14"). Three dots ... will be converted to an ellipsis.
-Unicode is supported. ☺
+<pre>
+这是一段模块缩进文本,无论文本多长,只要不换行都会在一行内aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</pre>
 
-## An h2 header
+&emsp;这是正常的段落开头的文本缩进,较为长的文本会正常换行,接下来随便粘贴一段文字:该系统通过虚拟城市的构建和动态仿真，可以帮助城市规划者进行合理的规划和优化决策，尤其在交通信号灯控制和道路分流方面有效缓解拥堵，提升城市管理效率​ 
 
-Here's a numbered list:
-
-1. first item
-2. second item
-3. third item
-
-Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:
-
-    # Let me re-iterate ...
-    for i in 1 .. 10 { do-something(i) }
-
-As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:
-
+代码用行"``"
+代码块用"``` ```"
 ```
-define foobar() {
-    print "Welcome to flavor country!";
+#include<iostream>
+using namespace std;
+int main()
+{
+	cout<<"Helloworld"; 
 }
 ```
 
-(which makes copying & pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it:
+*无序表<br />*
 
-```python
-import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print i
+* 无序列表 1
++ 无序列表 2
+- 无序列表 3
+
+*无序表2<br />*
+
+- 无序列表 1
+- 无序列表 2
+	- 无序列表 2.1
+	- 无序列表 2.2
+
+
+*有序表<br />*
+
+1. 有序列表 1
+2. 有序列表 2
+3. 有序列表 3
+
+表格:
 ```
+| 学号 | 姓名 | 年龄 | 
+| :--- | :---: | ---: | (引号的位置代表着对齐方式)
+|114514|张三|999|
+|6|李四|666|
+```
+| 学号 | 姓名 | 年龄 | 
+| :--- | :---: | ---: |
+|114514|张三|999|
+|6|李四|666|
 
-### An h3 header
+ToDoList:"-[空格]空格"
+- [ ] :写代码
 
-Now a nested list:
 
-1. First, get these ingredients:
+引用："> + 空格" 
+> 这是一个引用示例
+> > 引用可以嵌套
 
-    - carrots
-    - celery
-    - lentils
+上标使用"^"包围，下标使用"~"包围
+a^b^
+H~2~O是有毒的
 
-2. Boil some water.
+图片：可以直接拖进来，也可以和连接一样，不过在前面借一个感叹号即可
 
-3. Dump everything in the pot and follow
-    this algorithm:
+注释，再你需要注释的文字后加"[^+数字]"，然后在文档最后说明，下面是个简单的例子 
+你现在所看到的文档是CliffKai[^1]的MarkDown学习笔记
 
-        find wooden spoon
-        uncover pot
-        stir
-        cover pot
-        balance wooden spoon precariously on pot handle
-        wait 10 minutes
-        goto first step (or shut off burner when done)
-
-    Do not bump wooden spoon or it will fall.
-
-Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above).
-
-Here's a link to [a website](http://foo.bar), to a [local
-doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
-
-[^1]: Footnote text goes here.
-
-Tables can look like this:
-
-size material color
-
----
-
-9 leather brown
-10 hemp canvas natural
-11 glass transparent
-
-Table: Shoes, their sizes, and what they're made of
-
-(The above is the caption for the table.) Pandoc also supports
-multi-line tables:
-
----
-
-keyword text
-
----
-
-red Sunsets, apples, and
-other red or reddish
-things.
-
-green Leaves, grass, frogs
-and other things it's
-not easy being.
-
----
-
-A horizontal rule follows.
-
----
-
-Here's a definition list:
-
-apples
-: Good for making applesauce.
-oranges
-: Citrus!
-tomatoes
-: There's no "e" in tomatoe.
-
-Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)
-
-Here's a "line block":
-
-| Line one
-| Line too
-| Line tree
-
-and images can be specified like so:
-
-[//]: # (![example image]&#40;./demo-banner.png "An exemplary image"&#41;)
-
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
-
-$$
-\begin{equation*}
-\pi
-=3.1415926535
- \;8979323846\;2643383279\;5028841971\;6939937510\;5820974944
- \;5923078164\;0628620899\;8628034825\;3421170679\;\ldots
-\end{equation*}
-$$
-
-And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+[^1]:张三是一个爱好非学习的研究生
