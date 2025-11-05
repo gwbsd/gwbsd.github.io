@@ -38,9 +38,6 @@ importers:
       '@fontsource/roboto':
         specifier: ^5.2.8
         version: 5.2.8
-      '@iconify-json/fa6-brands':
-        specifier: ^1.2.6
-        version: 1.2.6
       '@iconify-json/fa6-regular':
         specifier: ^1.2.4
         version: 1.2.4
@@ -147,6 +144,9 @@ importers:
       '@biomejs/biome':
         specifier: 2.2.5
         version: 2.2.5
+      '@iconify-json/fa6-brands':
+        specifier: ^1.2.6
+        version: 1.2.6
       '@rollup/plugin-yaml':
         specifier: ^4.1.2
         version: 4.1.2(rollup@2.79.2)

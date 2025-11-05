@@ -1,9 +1,12 @@
-# About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+# 关于
+## 说明
+>这个网站存在的初衷是记录个人的成长
 
-::github{repo="saicaca/fuwari"}
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+>也希望能帮到需要的人
+## 个人介绍
+> - 本科毕业于USTB,BUAA工科在读
+> - 喜欢探索各种有趣的东西，学习各种有趣的技能
+## 联系方式
+> - 左侧有B站和GitHub的链接
+> - 邮箱：1228828632@qq.com（注明来意，这个邮箱不常看）
