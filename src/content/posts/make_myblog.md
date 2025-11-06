@@ -38,3 +38,28 @@ IdentityFile ~/.ssh/id_rsa_three
 - 打开 github 点击头像，点击 Settings ，左侧找到 SSH and GPG keys ， 点击 new SSH key
 - Title 随便写，下方的 Key 的部分用你刚刚创建的秘钥中的内容填充，即 id_rsa_three.pub （在记事本中编辑）全选复制，粘贴进去。点击 add SSH key ，然后输入自己账号密码。
 - 打开终端，输入："`ssh -T git@one.github.com`"
+### 3.克隆仓库与连接
+- 到了这步，其实是比较麻烦的，因为好多人的电脑没有装各种东西和配置环境，许多网上的教程直接开始操作，所以就会有各种报错。
+- 首先安装git并且配置环境，教程链接：https://blog.csdn.net/weixin_53191752/article/details/119644206
+- 接下来是npm,pnpm.教程链接：https://blog.csdn.net/weixin_45682701/article/details/147339130（后续报错可能是教程不全，检查环境配置）
+- 配置好一切之后，找到仓库里的Code->SSH,复制它，我的是这样：git@github.com:gwbsd/gwbsd.github.io.git
+- 打开vscode,新建一个文件夹，打开终端，运行"`gitclone git@one.github.com:gwbsd/gwbsd.github.io.git`",这里根据你的情况更改，仓库就克隆过来了
+- 查看是否与 github 仓库远程连接成功"`git remote -v`"
+### 4.配置 Github Pages
+- 到项目仓库中，找到 Actions ，enable them 开启它
+- 然后在 Settings 里面的 Pages 更改 Source 为 Github Action
+### 5.安装依赖和本地查看网页
+- 根据模板的教程运行代码，每个模板可能会不同，我们这里是“ `pnpm install` 并 `pnpm add sharp`”
+- 再运行这个来在本地查看网页:`pnpm dev`
+### 6.把本地仓库推送到远程连接的 github 仓库
+- 我们通过一下两个操作来更新我们本地 git 的内容，这时左侧 VScode 显示的绿色、棕色就没了，表示本地内容已同步。其中 . 表示当前文件夹，即把当前文件夹内所有文件和飞控文件夹设置为待提交状态。`git add .` 和 `git commit -m "feat: test`
+- 通过以下语句来把本地仓库，推送到远程连接的 github 仓库：`git push`
+- Vscode 请求你们授权，就一路点绿色按钮，授权完成，最后页面如果没有跳转，点击它提供的超链接回到 VScode。
+- 然后稍等一会儿（等到仓库里棕色的点变为绿色的勾），就完成了
+### 7.让所有人都可以打开你的网页
+- 进入https://app.netlify.com/，注册一个免费的账号，然后把他与你的github账号连接
+- 如果有细节不会，可以查看这里https://docs.astro.build/zh-cn/tutorial/0-introduction/（注意不用按照他的步骤，做自己需要的即可）
+## 写在最后
+- astro.config.js：把 site 里面前缀更改为你的用户名，也就是用你的网址，其余为添加、修改或删除一些东西，根据需求配置
+- src/content：这个文件夹内放的就是你写的博客文档或者项目介绍了。一些操作可以看提供的 Markdown 使用文档学习
+- `pnpm new-post <filename>`这个是创建新文章的指令，具体可以仔细读一下docs文件夹里的README.zh-CN
